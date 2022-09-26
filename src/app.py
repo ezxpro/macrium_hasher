@@ -5,12 +5,17 @@ import sys
 
 BKP_PATH = "Z:\\Setembro\\"
 BUF_SIZE = 8388608
+
+
 def write_digest(digest, alg, img_name, path = BKP_PATH):
+    """document placeholder"""
         h = open(path + img_name + "." + alg, 'w', encoding = "utf-8")
         h.write(digest + " *" + img_name)
         h.close()  
 
+
 def list_path(path):
+    """document placeholder"""
     file_list = os.listdir(path)
     if 'backup_running' in file_list: # checks if backup folder is locked, quits if True
         raise Exception("A backup is running right now. Can't proceed with the verification")
@@ -18,7 +23,9 @@ def list_path(path):
         file_list.sort()
         return file_list
     
+
 def create_hasher(alg):
+    """document placeholder"""
     alg = alg.lower()
     if alg == "sha1":
         hasher = hashlib.sha1()
@@ -30,25 +37,25 @@ def create_hasher(alg):
 
 
 def hash_all(alg, path = BKP_PATH):
+    """document placeholder"""
     file_list = list_path(path)
-
     unhashed_imgs = []
     for i in file_list:
         if i.endswith(".mrimg"):
             if i + "." + alg not in file_list:
                 unhashed_imgs.append(i)
-
     print("You have " + str(len(unhashed_imgs)) + " unverified backups")
     for i in unhashed_imgs:
             print("          " + i)
     if len(unhashed_imgs) > 1:
         print("Starting verification now...")
-
     for i in unhashed_imgs:
         digest = hash_img(alg, i, path)
         write_digest(digest, alg, i)
 
+
 def hash_img(alg, img, path = BKP_PATH):
+    """document placeholder"""
     file_list = list_path(path)
     print("Hashing "+ path + img, ". Please wait...")
     with open(path + img, 'rb') as f:     
@@ -61,9 +68,10 @@ def hash_img(alg, img, path = BKP_PATH):
         print("Hash generation succeeded.")
         return hasher.hexdigest()
 
-def hash_last(alg, path = BKP_PATH):
-    file_list = list_path(path)
 
+def hash_last(alg, path = BKP_PATH):
+    """document placeholder"""
+    file_list = list_path(path)
     for i in reversed(range(len(file_list))):
         if file_list[i].endswith('.mrimg'):
             last_file = file_list[i]
@@ -85,6 +93,8 @@ def hash_last(alg, path = BKP_PATH):
 
        
 hash_all("sha1")
+
+
 #hash_last("sha1")
 '''
 Just checked and there's more than one unverified backup.
