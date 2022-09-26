@@ -38,10 +38,11 @@ def hash_all(alg, path = BKP_PATH):
             if i + "." + alg not in file_list:
                 unhashed_imgs.append(i)
 
-    print("You have " + str(len(unhashed_imgs)) + " unverified backups:")
+    print("You have " + str(len(unhashed_imgs)) + " unverified backups")
     for i in unhashed_imgs:
             print("          " + i)
-    print("Starting verification now...")
+    if len(unhashed_imgs) > 1:
+        print("Starting verification now...")
 
     for i in unhashed_imgs:
         digest = hash_img(alg, i, path)
