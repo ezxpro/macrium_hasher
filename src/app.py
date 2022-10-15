@@ -1,14 +1,13 @@
 import hashlib
 import os
-import sys
 
 
-BKP_PATH = "Z:\\Setembro\\"
+BKP_PATH = "Z:\\Outubro\\"
 BUF_SIZE = 8388608
 
 
 def write_digest(digest, alg, img_name, path = BKP_PATH):
-    """document placeholder"""
+        """document placeholder"""
         h = open(path + img_name + "." + alg, 'w', encoding = "utf-8")
         h.write(digest + " *" + img_name)
         h.close()  
