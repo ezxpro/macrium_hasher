@@ -2,7 +2,7 @@ import hashlib
 import os
 
 
-BKP_PATH = os.path.join("Z:\\Outubro\\")
+BKP_PATH = os.path.join("Z:\\Novembro\\")
 BUF_SIZE = 8388608
 
 
