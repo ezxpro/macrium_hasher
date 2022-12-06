@@ -1,1 +1,46 @@
-<mxfile host="app.diagrams.net" modified="2022-12-06T00:25:18.159Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" version="20.6.0" etag="a8R883MmU9iAUNnXC1lb" type="github"><diagram id="DNahupVhHyB2-S8q18rY">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-12-06T01:05:18.029Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" version="20.6.0" etag="Y681vxSqBnLeFHWZYrJD" type="github">
+  <diagram id="bMo1qKAcTcvX_rqiJ0I-" name="Page-1">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="J5avImgitHCRgGs_-t2m-5" value="hasher" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="50" width="160" height="278" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-6" value="+ hash_alg: string&#xa;+ backup_img_path: Path&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="J5avImgitHCRgGs_-t2m-5">
+          <mxGeometry y="26" width="160" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="J5avImgitHCRgGs_-t2m-5">
+          <mxGeometry y="120" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-8" value="+ set_hash_alg()&#xa;+ hash_all_img()&#xa;+ hash_single_img()&#xa;+ hash_last_img()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="J5avImgitHCRgGs_-t2m-5">
+          <mxGeometry y="128" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-13" value="definition" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="50" width="160" height="248" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-14" value="+ xml_path: Path&#xa;+ " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="J5avImgitHCRgGs_-t2m-13">
+          <mxGeometry y="26" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="J5avImgitHCRgGs_-t2m-13">
+          <mxGeometry y="90" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-16" value="+ get_json_def_path()&#xa;+ get_img_path()&#xa;+" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="J5avImgitHCRgGs_-t2m-13">
+          <mxGeometry y="98" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-21" value="definition" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="50" width="160" height="248" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-22" value="+ xml_path: Path&#xa;+ " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="J5avImgitHCRgGs_-t2m-21">
+          <mxGeometry y="26" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-23" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="J5avImgitHCRgGs_-t2m-21">
+          <mxGeometry y="90" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="J5avImgitHCRgGs_-t2m-24" value="+ get_json_def_path()&#xa;+ get_img_path()&#xa;+" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="J5avImgitHCRgGs_-t2m-21">
+          <mxGeometry y="98" width="160" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
