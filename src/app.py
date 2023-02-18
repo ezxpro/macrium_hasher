@@ -1,17 +1,19 @@
 import hashlib
 import os
 import sys
+from pathlib import Path
 
 
-BKP_PATH = "Z:\\Setembro\\"
+BKP_PATH = Path("Z:\\Janeiro\\")
 BUF_SIZE = 8388608
 
 
 def write_digest(digest, alg, img_name, path = BKP_PATH):
     """document placeholder"""
-        h = open(path + img_name + "." + alg, 'w', encoding = "utf-8")
-        h.write(digest + " *" + img_name)
-        h.close()  
+    path = Path(path, img_name + "." + alg)
+    h = open(path, 'w', encoding = "utf-8")
+    h.write(digest + " *" + img_name)
+    h.close()  
 
 
 def list_path(path):
@@ -57,8 +59,9 @@ def hash_all(alg, path = BKP_PATH):
 def hash_img(alg, img, path = BKP_PATH):
     """document placeholder"""
     file_list = list_path(path)
-    print("Hashing "+ path + img, ". Please wait...")
-    with open(path + img, 'rb') as f:     
+    path = Path(path, img)
+    print(f"Hashing  {path}. Please wait...")
+    with open(path, 'rb') as f:     
         hasher = create_hasher(alg)
         while True:
             data = f.read(BUF_SIZE)
